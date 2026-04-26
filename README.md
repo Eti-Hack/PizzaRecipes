@@ -1,4 +1,4 @@
-# 🍕 PizzaApp — TP Android Java
+# 🍕 PizzaApp 
 
 Application Android développée en Java dans le cadre d'un TP universitaire.
 Elle affiche une liste de pizzas avec accès aux détails de chaque recette.
@@ -12,26 +12,6 @@ Elle affiche une liste de pizzas avec accès aux détails de chaque recette.
 - Passer des données entre activités via `Intent`
 - Implémenter un Splash Screen animé
 - Mettre en œuvre un modèle de données orienté objet
-
----
-
-## 🏗️ Architecture du projet
-
-```
-app/src/main/java/com/example/pizzaapp/
-├── classes/
-│   └── Produit.java          # Modèle de données (id, nom, prix, durée, image, description)
-├── dao/
-│   └── ProduitDao.java       # Accès aux données (liste des pizzas)
-├── service/
-│   └── ProduitService.java   # Logique métier
-├── adapter/
-│   └── ProduitAdapter.java   # Adapter personnalisé pour la ListView
-└── ui/
-    ├── SplashActivity.java   # Écran de démarrage animé
-    ├── MainActivity.java     # Liste des pizzas
-    └── DetailActivity.java   # Détail d'une recette
-```
 
 ---
 
@@ -64,22 +44,6 @@ app/src/main/java/com/example/pizzaapp/
 - Informations : nom, prix, durée, image, description complète
 - Passage des données depuis `MainActivity` via `Intent`
 
----
-
-## 🧩 Modèle de données — `Produit.java`
-
-```java
-public class Produit {
-    private int id;
-    private String nom;
-    private double prix;
-    private int duree;       // en minutes
-    private int image;       // référence drawable R.drawable.*
-    private String description;
-
-    // Constructeurs, getters, setters...
-}
-```
 
 ---
 
@@ -127,33 +91,13 @@ File → Sync Project with Gradle Files
 
 ---
 
-## 🖼️ Aperçu de l'interface
+## 🖼️ Aperçu 
 
 ```
-┌─────────────────────┐     ┌─────────────────────┐
-│   🍕  PizzaApp      │     │   ← Margherita       │
-│                     │     │                     │
-│ [img] Margherita    │     │   [    image    ]   │
-│       8.50€  15min  │ ──► │                     │
-│                     │     │  Prix  : 8.50 €     │
-│ [img] Reine         │     │  Durée : 15 min     │
-│       9.00€  20min  │     │                     │
-│                     │     │  Tomate, mozzarella │
-│ [img] 4 Fromages    │     │  basilic frais...   │
-│       10.50€ 25min  │     │                     │
-└─────────────────────┘     └─────────────────────┘
-     MainActivity                DetailActivity
-```
 
----
+https://github.com/user-attachments/assets/d8b7d384-1838-4b3f-a5d0-a67911607456
 
-## 🔄 Flux de navigation
 
-```
-SplashActivity
-      ↓ (2 secondes)
-MainActivity  ──(clic sur une pizza)──►  DetailActivity
-  ListView                                 Détail complet
 ```
 
 ---
